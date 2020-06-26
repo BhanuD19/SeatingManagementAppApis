@@ -2,6 +2,7 @@ package com.project.seatingplan.Service;
 
 import com.project.seatingplan.dto.request.mobile.ChangePassword;
 import com.project.seatingplan.dto.request.mobile.ForgotPassword;
+import com.project.seatingplan.dto.request.mobile.LoginUser;
 import com.project.seatingplan.dto.request.web.UserReq;
 import com.project.seatingplan.dto.response.mob.CityResp;
 import com.project.seatingplan.dto.response.mob.LoginUserResp;

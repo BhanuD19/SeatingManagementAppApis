@@ -40,7 +40,7 @@ public class GenerateSeatingPlanService {
     this.batchSectionStudentRepo = batchSectionStudentRepo;
   }
 
-  public List<Map<String, Object>> creatingSeatingPlan(SeatingPlanGenerateReq seatingPlanGenerateReq, MultipartFile inputFile) throws Exception {
+  public List<Map<String, Object>> createSeatingPlan(SeatingPlanGenerateReq seatingPlanGenerateReq, MultipartFile inputFile) throws Exception {
     int totalStudent = 0;
     int roomCapacity = 0;
 
