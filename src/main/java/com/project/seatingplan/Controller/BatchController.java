@@ -31,7 +31,7 @@ public class BatchController {
       return RestResponse.build().withError("Failed to add batch due to: " + e.getMessage());
     }
     logger.info("batch added successfully");
-    return RestResponse.build().withSuccess("batch added successfully")
+    return RestResponse.build().withSuccess("batch added successfully");
   }
 
 
@@ -45,7 +45,7 @@ public class BatchController {
       return RestResponse.build().withError("Failed to update batch due to: " + e.getMessage());
     }
     logger.info("batch updated successfully");
-    return RestResponse.build().withSuccess("batch updated successfully")
+    return RestResponse.build().withSuccess("batch updated successfully");
   }
 
   @RequestMapping(value = "/byCourse/{courseId}", method = RequestMethod.GET)
