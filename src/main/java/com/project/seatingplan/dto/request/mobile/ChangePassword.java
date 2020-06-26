@@ -9,10 +9,6 @@ public class ChangePassword {
     return oldPassword;
   }
 
-  public void setOldPassword(String oldPassword) {
-    this.oldPassword = oldPassword;
-  }
-
   public String getNewPassword() {
     return newPassword;
   }

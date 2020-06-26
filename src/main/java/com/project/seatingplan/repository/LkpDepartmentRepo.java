@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface LkpDepartmentRepo extends JpaRepository<LkpDepartment, Integer> {
   @Query("select e from LkpDepartment e where e.isDeleted = 0 and e.id=:id")
-  Optional<LkpDepartment> findById(@Param("id") Integer id);
+  LkpDepartment findByLkpDepartmentId(@Param("id") Integer id);
 
   @Query("select e from LkpDepartment e where e.isDeleted = 0")
   List<LkpDepartment> findAll();

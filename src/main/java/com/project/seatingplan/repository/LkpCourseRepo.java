@@ -15,7 +15,7 @@ public interface LkpCourseRepo extends JpaRepository<LkpCourse, Integer> {
   List<LkpCourse> findAllById(@Param("id") Integer id);
 
   @Query("select e from LkpCourse e where e.isDeleted = 0 and e.id=:id")
-  Optional<LkpCourse> findById(@Param("id") Integer id);
+  LkpCourse findByLkpCourseId(@Param("id") Integer id);
 
   @Query("select e from LkpCourse e where e.isDeleted = 0 and e.name=:name")
   List<LkpCourse> findAllByName(@Param("name") String name);

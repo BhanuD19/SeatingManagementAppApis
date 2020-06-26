@@ -16,7 +16,7 @@ public interface RoleRepo extends JpaRepository<Role, Integer> {
   int markDeleted(@Param("id") Integer id);
 
   @Query("select e from Role e where e.isDeleted = 0 and e.id = :id")
-  Optional<Role> findById(@Param("id") Integer id);
+  Role findByRoleId(@Param("id") Integer id);
 
   @Query("select e from Role e where e.isDeleted = 0 and e.name = :name")
   Role findByName(@Param("name") String name);

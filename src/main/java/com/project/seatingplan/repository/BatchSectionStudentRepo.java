@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface BatchSectionStudentRepo extends JpaRepository<BatchSectionStudent, Integer> {
   @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.id = :id")
-  Optional<BatchSectionStudent> findById(@Param("id") Integer id);
+  BatchSectionStudent findByBatchSectionStudentId(@Param("id") Integer id);
 
   @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.batch.course.department.institute.id = :instituteId and e.batch.course.id = :courseId")
   List<BatchSectionStudent> findByCourseId(@Param("instituteId") Integer instituteId, @Param("courseId") Integer courseId);

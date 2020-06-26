@@ -13,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface InstituteRepo extends JpaRepository<Institute, Integer> {
   @Query("select e from Institute e where e.isDeleted = 0 and e.id =:id")
-  Optional<Institute> findById(@Param("id") Integer id);
+  Institute findByInstituteId(@Param("id") Integer id);
 
   @Query("select e from Institute e where e.isDeleted = 0 and e.alias =:alias")
   List<Institute> findByAlias(@Param("alias") String alias);

@@ -17,7 +17,7 @@ public interface DepartmentRepo extends JpaRepository<Department, Integer> {
   int markDeleted(@Param("id") Integer id);
 
   @Query("select e from Department e where e.isDeleted = 0 and e.id = :id")
-  Optional<Department> findById(@Param("id") Integer id);
+  Department findByDepartmentId(@Param("id") Integer id);
 
   @Query("select e from Department e where e.isDeleted = 0 and e.institute.id = :instituteId")
   List<Department> findByInstituteId(@Param("instituteId") Integer instituteId);

@@ -31,7 +31,7 @@ public interface UserRepo extends JpaRepository<User, Integer> {
   User findOneByEmail(@Param("email") String email);
 
   @Query("select e from User e where e.isDeleted = 0 and e.id=:id ")
-  Optional<User> findById(@Param("id") Integer id);
+  User findByUserId(@Param("id") Integer id);
 
   @Query("select e from User e where e.isDeleted = 0 and e.email=:email or e.contactOne =:contactOne and e.password=:password")
   User loginByEmailPassword(@Param("email") String email, @Param("contactOne") String contactOne, @Param("password") String password);

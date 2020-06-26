@@ -14,7 +14,7 @@ import java.util.Optional;
 public interface UserInstituteRepo extends JpaRepository<UserInstitute, Integer> {
 
   @Query("select e from UserInstitute e where e.isDeleted = 0 and e.id =:id")
-  Optional<UserInstitute> findById(@Param("id") Integer id);
+  UserInstitute findByUserInstituteId(@Param("id") Integer id);
 
   @Query("select e from UserInstitute e where e.isDeleted = 0 and e.user.id =:id")
   List<UserInstitute> findByUserId(@Param("id") Integer id);
