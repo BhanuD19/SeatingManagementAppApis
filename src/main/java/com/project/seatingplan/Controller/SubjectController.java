@@ -49,4 +49,19 @@ public class SubjectController {
       return RestResponse.build().withError("Failed to find subject by courseId semesterId due to :" + e.getMessage());
     }
   }
+
+//
+//	@RequestMapping(value = "/update", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
+//	public RestResponse update(@RequestBody SubjectReq subjectReq) {
+//		try {
+//			logger.info("Update Batch:{}", subjectReq);
+//			subjectService.update(subjectReq);
+//		} catch (Exception e) {
+//			logger.error("Failed to Update batch due to:{}", e.toString(), e);
+//			return RestResponse.build().withError("Failed to update batch due to :" + e.getMessage());
+//		}
+//		logger.error("Batch updated successfully.");
+//		return RestResponse.build().withSuccess("batch updated successfully.");
+//
+//	}
 }

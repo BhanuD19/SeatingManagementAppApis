@@ -21,7 +21,7 @@ public class FileService {
   public static final String IMAGE_URI_TEPLATE = "{0}/image/{1}.image";
   public static final String IMAGE_Entity_NAME_TEPLATE = "{0}/image/{1}";
 
-  @Value("${catalina.home}/seating-plan-app-images")
+  @Value("/seating-plan-generator-file")
   private String imageRepositoryPath;
 
   @Value("1048576")

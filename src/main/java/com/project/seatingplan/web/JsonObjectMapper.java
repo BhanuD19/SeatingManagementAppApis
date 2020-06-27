@@ -8,11 +8,14 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.project.seatingplan.config.JacksonMixinModule;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Configuration
 public class JsonObjectMapper extends ObjectMapper {
   private static final long serialVersionUID = 1L;
 

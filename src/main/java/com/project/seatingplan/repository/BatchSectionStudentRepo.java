@@ -17,7 +17,7 @@ public interface BatchSectionStudentRepo extends JpaRepository<BatchSectionStude
   @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.batch.course.department.institute.id = :instituteId and e.batch.course.id = :courseId")
   List<BatchSectionStudent> findByCourseId(@Param("instituteId") Integer instituteId, @Param("courseId") Integer courseId);
 
-  @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.batch.course.department.institue.id = :institueId and e.batch.id = :batchId")
+  @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.batch.course.department.institute.id = :instituteId and e.batch.id = :batchId")
   List<BatchSectionStudent> findByBatchIdByInstituteId(@Param("instituteId") Integer instituteId, @Param("batchId") Integer batchId);
 
   @Query("select e from BatchSectionStudent e where e.isDeleted = 0 and e.batch.id = :batchId")

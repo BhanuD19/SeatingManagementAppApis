@@ -51,7 +51,6 @@ public class BatchSectionStudentService {
     String fileExtension = FilenameUtils.getExtension(file.getOriginalFilename());
     logger.info("File extension:{}", fileExtension);
 
-    List<Student> studentList = new ArrayList<>();
     InputStream fileInputStream = file.getInputStream();
 
     try (XSSFWorkbook wb = new XSSFWorkbook(fileInputStream)) {

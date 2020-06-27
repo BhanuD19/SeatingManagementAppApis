@@ -16,6 +16,6 @@ public interface BatchRepo extends JpaRepository<Batch, Integer> {
   @Query("update Batch e set e.isDeleted = 1 where e.id = :id")
   int markDeleted(@Param("id") Integer id);
 
-  @Query("select e from Batch e where e.isDeleted = 0 and e.course.department.institute.id = :institueId and e.course.id = :courseId")
+  @Query("select e from Batch e where e.isDeleted = 0 and e.course.department.institute.id = :instituteId and e.course.id = :courseId")
   List<Batch> findByCourseId(@Param("instituteId") Integer instituteId, @Param("courseId") Integer courseId);
 }
